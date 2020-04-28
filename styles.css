@@ -1,109 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-main {
-	position: relative;
-}
-body {
-	font-family: sans-serif;
-	overflow-x: hidden;
-}
-header {
-	padding-bottom: 20px;
-}
-#head-content hr {
-	width: 70%;
-	border: 1px solid #eee;
-}
-
-/*Navbar*/
-nav {
-	display: flex;
-	background-color: #f1f1f1;
-	justify-content: space-around;
-	height: 70px;
-	-ms-align-items: center;
-	align-items: center;
-	color: rgb(234, 192, 255);
-}
-
-nav .logo img {
-	width: 140px;
-}
-nav ul {
-	display: flex;
-	list-style: none;
-	width: 25%;
-	justify-content: space-between;
-}
-
-nav ul li a {
-	text-decoration: none;
-	color: #474747;
-	font-weight: 600;
-}
-
-nav ul li a:hover {
-	color: green;
-	font-weight: bolder;
-	font-size: 15px;
-}
-
-
-/*button Menu*/
-.button-toggle {
-	display: none;
-	flex-direction: column;
-	height: 20px;
-	justify-content: space-between;
-	position: relative;
-}
-
-.button-toggle input {
-	position: absolute;
-	width: 40px;
-	height: 28px;
-	left: -5px;
-	top: -5px;
-	opacity: 0;
-	cursor: pointer;
-	z-index: 2;
-}
-
-.button-toggle span {
-	display: block;
-	width: 28px;
-	height: 3px;
-	background-color: green;
-	border-radius: 3px;
-	transition: all .5s;
-}
-
-/*span animasi*/
-.button-toggle span:nth-child(2) {
-	transform-origin: 0 0;
-}
-.button-toggle span:nth-child(4) {
-	transform-origin: 0 100%;
-}
-.button-toggle input:checked ~ span:nth-child(2) {
-	background-color: black;
-	transform: rotate(45deg) translate(-1px, -1px);
-}
-.button-toggle input:checked ~ span:nth-child(4) {
-	background-color: black;
-	transform: rotate(-45deg) translate(-1px, 0);
-}
-.button-toggle input:checked ~ span:nth-child(3) {
-	opacity: 0;
-	transform: scale(0);
-}
-
-
 /*Navbar Responsive*/
 @media screen and (max-width: 1024px){
 	.button-toggle {
@@ -166,91 +60,7 @@ nav ul li a:hover {
 	}
 }
 
-@media screen and (max-width: 768px) {
-	.button-toggle {
-		display: flex;
-		z-index: 2;
-	}
-	nav ul {
-		width: 25%;
-		position: absolute;
-		right: 0;
-		top: 0;
-		height: 100vh;
-		right: 0;
-		justify-content: space-evenly;
-		flex-direction: column;
-		-ms-align-items: center;
-		align-items: center;
-		background-color: #f1f1f1;
-		z-index: 1;
-		transform: translateX(100%);
-		transition: all 1s
-	}
-
-	nav ul.geser {
-		transform: translateX(0);
-	}
-
-	nav ul li a {
-		font-weight: 600;
-	}
-}
-
-@media screen and (max-width: 576px) {
-	.button-toggle {
-		display: flex;
-		z-index: 2;
-	}
-	nav ul {
-		width: 50%;
-		position: absolute;
-		right: 0;
-		top: 0;
-		height: 100vh;
-		right: 0;
-		justify-content: space-evenly;
-		flex-direction: column;
-		-ms-align-items: center;
-		align-items: center;
-		background-color: #f1f1f1;
-		z-index: 1;
-		transform: translateX(100%);
-		transition: all 1s
-	}
-
-	nav ul.geser {
-		transform: translateX(0);
-	}
-
-	nav ul li a {
-		font-weight: 600;
-	}
-}
-
-/*Nav Image*/
-.nav-image {
-	background-image: url("../img/paris.jpg");
-	height: 400px;
-	background-position: center;
-	background-size: cover;
-}
-.isi-image p {
-	position: absolute;
-	left: 30%;
-	top: 45%;
-	text-shadow: 2px 2px 9px green;
-
-	color: white;
-	font-size: 40px;
-	font-weight: bolder;
-}
-.image-yk {
-	width: 100px;
-	position: absolute;
-	left: 45%;
-	top: 20%;
-}
+/*Nav Image Responsive*/
 @media screen and (max-width: 576px){
 	.image-yk {
 		left: 30%;
@@ -337,42 +147,7 @@ nav ul li a:hover {
 }
 
 
-/*Teks-One*/
-.text-one {
-	text-align: center;
-	color: #474747;
-	padding: 25px 0;
-}
-.text-one p {
-	font-size: 30px;
-	font-family: 'IBM Plex-sans', sans-serif;
-	font-weight: bolder;
-}
-.text-one h4 {
-	font-size: 20px;
-	justify-content: space-between;
-	font-variant: small-caps;
-	font-weight: 500;
-}
-
 /*Menu Content*/
-#menu-content {
-	display: flex;
-	text-align: center;
-	justify-content: space-around;
-	padding: 0 25% 30px 25%;
-
-}
-.row-con img {
-	width: 130px;
-	border-radius: 50%;
-	transition: all .3s;
-}
-.row-con img:hover {
-	width: 140px;
-	transform: rotate(360deg);
-	cursor: pointer;
-}
 @media screen and (max-width: 1024px){
 	#menu-content {
 		padding: 20px 25%;
@@ -410,12 +185,6 @@ nav ul li a:hover {
 	}
 }
 
-hr {
-	margin: auto;
-	width: 5%;
-	border: 2px solid green;
-	border-radius: 50px;
-}
 
 
 /*Pembagian*/
@@ -466,40 +235,7 @@ aside {
 }
 
 
-/*isi RIGHT SIDE*/
-.box-aside {
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
-.box-aside img {
-    width: 170px;
-}
-.box-aside p {
-    text-align: center;
-    font-weight: bolder;
-    padding: 20px;
-    color: #474747;
-}
-.box-aside h3 {
-	color: #474747;
-	font-size: 15px;
-	padding: 10px 0 5px 0;
-}
-.box-aside h4 {
-	color: #474747;
-	font-size: 12px;
-	padding: 5px 0;
-}
-.box-aside h5 {
-    color: #474747;
-}
-.box-aside h6 {
-	font-size: 13px;
-	font-weight: 350;
-	padding: 5% 10%;
-	line-height: 1.5em;
-}
+/*Halaman*/
 @media screen and (max-width: 800px){
 	#content, aside {
 		width: 100%;
@@ -543,40 +279,6 @@ aside {
 }
 
 /*FLEXBOX*/
-.kepala-flex {
-	padding: 0 5%;
-}
-.flex-column {
-    display: flex;
-    flex-direction: column;
-
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-}
-.flex-row {
-    display: flex;
-    flex-direction: row;
-
-    flex-grow: 1;
-}
-.bok {
-    flex-grow: 1;
-     
-    width: 33.33%;
-    text-align: center;
-}
-.bokim {
-    width: 150px;
-}
-.text-flex {
-    padding-top: 50px;
-    text-align: center;
-    font-size: 25px;
-    font-weight: bolder;
-    font-variant: small-caps;
-    color: #474747;
-}
 @media screen and (max-width: 768px){
 	.kepala-flex {
 		padding: 0 10%;
@@ -614,21 +316,6 @@ aside {
 }
 
 /*footer*/
-footer {
-    position: absolute;
-    padding: 40px;
-    width: 100%;
-    background-color: #297a26;
-    z-index: 2;
-    bottom: 0;
-    transform: translateY(3700px);
-}
-footer p {
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    text-align: center;
-}
 @media screen and (max-width: 1024px){
 	footer {
 		transform: translateY(4800px);
